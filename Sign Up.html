@@ -1,0 +1,76 @@
+<!Doctype Html>
+
+<Html lang="en" >
+
+	<Head>
+		<link rel="stylesheet" href="QFstylesheet.css">
+
+		<Title>
+			Quick Foods - SignUp
+		</Title>
+		<link rel="icon" type="image/x-icon" href="backgburger.jpg">
+
+		<style>
+			body{
+				background-repeat: no-repeat;
+				background-position-x: bottom;
+				background-position-y: center;
+				background-size: 800px;
+				margin-top: 100px;   
+			}
+		</style>
+		<script>
+			function myFunction() {
+				var checkbox = document.getElementById("hidedaddy");
+				var text = document.getElementById("delivery address");
+
+				if (checkbox.checked == true){
+					text.style.display = "block";
+				}else{
+					text.style.display = "none";
+				}
+			}
+		</script>
+	</Head>
+	<Body background="backgburger.jpg" >
+
+		<h1>WELCOME TO QUICKFOODS</h1>
+		<h2>Please Fill this form to create an account</h2>
+		<div class="signupform">
+			<form>
+
+				<label for="name"> Full Name: </label><br>
+				<input type="text" id="name" name="name" placeholder="First & Last Name"><br>
+	
+				<label for="phone number"> Phone Number: </label><br>
+				<input type="number" id="phone number" name="phone number" placeholder="0909-884-7827" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"><br>
+	
+	
+				<label for="email"> Email: </label><br>
+				<input type="text" id="email" name="email" placeholder="e.g keeptrying@email.com"><br>
+	
+				<label for="password">Password: </label><br>
+				<input type="password" id="password" name=" password"><br>
+	
+				<label for="password"> Confirm Password: </label><br>
+				<input type="password" id="confirm password" name="confirm password"><br>
+	
+				<label for="address"> Home Address: </label><br>
+				<input type="text" id="address" name="home address" placeholder="e.g plot 11/12 Nigerian Army Post Service Estate, Eleyele" ><br>
+
+				<label for="delivery address" style="display:none" class="dddd">Delivery Address: </label><br>
+				<input type="text" id="delivery address" name="delivery address" class="dddd"style="display:none" placeholder="Enter Delivery Address" ><br>
+	
+				<p>
+					<input type="checkbox" style="margin-left: -80px;" id="hidedaddy" onclick="myFunction()">
+					Click here if delivery address is NOT the same as Home Address
+				</p>
+				
+				<input type="submit" value="Sign up">
+	
+			</form>
+		</div>
+	</body>
+</Html>
+
+
